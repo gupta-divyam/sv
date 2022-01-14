@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lets Chat Web App</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<style>
+    html, body
+{
+  height: 100%;
+  margin: 0;
+}
+
+body
+{
+background-image: linear-gradient(to right top, #59f133, #14ec31, #46f302, #59f133, #14ec31);
+}
+.input_div_message_page
+{
+	position: fixed;bottom: 0px;width: 100%;background: rgba(255,255,255,0.8);
+}
+.input_div_message_page label
+{
+	color: black;
+}
+.input_div_message_page #msg
+{
+	width: 80%;
+}
+.input_div_message_page button
+{
+	margin-top: 15px;
+	width: 50%; 
+}
+.color_white
+{
+	color: white
+}
+.message_h4
+{
+	padding-left:5px;color:grey;
+}
+</style>
+<body>
+    <div class="container">
+        <button id="logout" class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
+        <center>
+            <h1 class="header">	
+                Lets Chat Web App
+            </h1>
+            <div  id="output" style="text-align: left;margin-bottom: 70px;"> </div>
+        </center>
+    </div>
+    
+    <center>
+        <div  class="input_div_message_page">
+            <label>Send:</label>
+            <input id="msg" class="form-control" placeholder="Type Messege">
+            <button onclick="send()" class="btn btn-success">Send</button>
+        </div>
+    </center>
+<script src="chat_page.js"></script>
+</body>
+</html>
